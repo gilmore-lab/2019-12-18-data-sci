@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Rick Gilmore" />
+  <title>How to share personal data ethically</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="libs/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">How to share personal data ethically</h1>
+    <h2 class="author">Rick Gilmore</h2>
+    <h3 class="date">2019-12-18 11:55:22</h3>
+</section>
+
+<section><section id="preliminaries" class="title-slide slide level1"><h1>Preliminaries</h1></section><section class="slide level2">
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px> <img src="https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_120,w_120,f_auto,b_white,q_auto:eco/ex89p5pm1bvck2ow3vwd" height=150px></br> <img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px> <img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/> <img src="https://www.unicef.org.hk/wp-content/uploads/2017/08/Logo-05_Lego-foundation_UNICEF_partnership.jpg" height=150px /> </br> <img src="https://nationalpress.org/wp-content/uploads/2016/04/NIDA-logo-300x300.jpg" height=150px/> <img src="http://bewellva.com/wp-content/uploads/2017/12/NIMH-Logo_14-e1510955490255.jpg" height=150px/></p>
+<!-- Funding sources with icons -->
+</section><section class="slide level2">
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/DenverCP.JPG/266px-DenverCP.JPG" height=150px/> <img src="http://watson.brown.edu/ds/sites/all/themes/ds/img/header/brown_large.png" height=150px/> <img src="https://www.wheretraveler.com/sites/default/files/styles/wt17_promoted/public/WashingtonDC-shutterstock_93633676.jpg?itok=IT7CL9PU" height=150px/> <img src="https://ai.cs.cmu.edu/sites/default/files/CMU.png" height=150px/> <img src="http://onwardstate.com/wp-content/uploads/2014/10/93" height=150px/> <img src="img/sleic.jpg" height=150px/></br> <img src="https://nyu.databrary.org/web/images/logo/databrary-nav.svg" height=150px></p>
+<!-- Gilmore photo biography -->
+</section><section id="overview" class="slide level2">
+<h2>Overview</h2>
+<ul>
+<li>Data scientists need data</li>
+<li>Data about people requires protection</li>
+<li>Databrary.org</li>
+<li>How Databrary shares identifiable data</li>
+</ul>
+</section></section>
+<section><section id="data-scientists-need-data" class="title-slide slide level1"><h1>Data scientists need data</h1></section><section class="slide level2">
+
+<p><img data-src="http://www.globalhealthresearch.co/workshops/ieat/img/ieat.png" /></p>
+</section></section>
+<section><section id="data-about-people-requires-protection" class="title-slide slide level1"><h1>Data about people requires protection</h1></section><section id="risks" class="slide level2">
+<h2>Risks</h2>
+<ul>
+<li>Breaches of <em>privacy</em></li>
+<li>Breaches of <em>confidentiality</em></li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>How are data collected?</li>
+<li>How are data stored and shared?</li>
+</ul>
+</section><section id="video-and-audio-data-pose-special-risks" class="slide level2">
+<h2>Video and audio data pose special risks</h2>
+</section><section class="slide level2">
+
+<ul>
+<li>Faces &amp; voices</li>
+<li>Names, personal locations</li>
+<li>Behaviors</li>
+</ul>
+</section><section id="video-data-have-unique-research-potential" class="slide level2">
+<h2>Video data have unique research potential</h2>
+</section><section class="slide level2">
+
+<ul>
+<li>Spatially &amp; temporally dense samples of behavior</li>
+<li>“Outputs” of biological processes</li>
+<li>How procedures are actually done</li>
+</ul>
+</section><section id="how-to-protect-against-risk-realize-potential" class="slide level2">
+<h2>How to protect against risk &amp; realize potential?</h2>
+</section></section>
+<section><section id="databrary.org" class="title-slide slide level1"><h1><a href="https://databrary.org">Databrary.org</a></h1></section><section class="slide level2">
+
+<ul>
+<li>World’s only data library specialized for storing and sharing video and audio</li>
+<li>Hosted at New York University</li>
+<li>Opened 2014</li>
+<li>551 Institutions; 1,500+ researchers, 46K hours of video + other data</li>
+</ul>
+</section><section class="slide level2">
+
+<iframe src="https://databrary.org" height="600px" width="1000px">
+</iframe>
+</section></section>
+<section><section id="how-databrary-protects-personal-data" class="title-slide slide level1"><h1>How Databrary protects personal data</h1></section><section id="protecting-personal-data" class="slide level2">
+<h2>Protecting personal data</h2>
+<ul>
+<li>Data shared only with participant permission (&amp; IRB approval)</li>
+<li><a href="https://www.databrary.org/resources/templates/release-template.html">Template language</a>, scripts</li>
+</ul>
+</section><section class="slide level2">
+
+<p></br> <video width="640" height="480" controls> <source src="https://www.databrary.org/video/example-video-1.mp4" type="video/mp4"> </video> </br> <a href="https://www.databrary.org/video/example-video-1.mp4" class="uri">https://www.databrary.org/video/example-video-1.mp4</a></p>
+</section><section id="open-sharing-but-with-restricted-audiences_" class="slide level2">
+<h2>Open sharing (but with restricted audiences_</h2>
+</section><section class="slide level2">
+
+<ul>
+<li>Researchers require institutional authorization</li>
+<li><a href="https://www.databrary.org/resources/agreement.html">Formal access agreement</a></li>
+<li>Site-wide, not dataset-specific</li>
+<li>Data use and contribution</li>
+</ul>
+</section><section id="virtues" class="slide level2">
+<h2>Virtues</h2>
+<ul>
+<li>Restricted data sharing has long track-record</li>
+<li>Meaningful sharing permission; clarifies nature of risk</li>
+<li>Empowers participants</li>
+<li>Researchers &amp; institutions determine what to share &amp; when</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>Open, but not public, sharing</li>
+<li>Researchers, Institutions need not reinvent wheels</li>
+<li>More discoverable than personal websites or institutional repositories</li>
+<li>More secure than public data and materials services or journal web pages</li>
+</ul>
+</section><section class="slide level2">
+
+<ul>
+<li>Consistent curation makes reuse easier</li>
+<li>Works for data beyond video</li>
+<li>Secure data interaction via API</li>
+</ul>
+</section><section class="slide level2">
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span> (databraryapi<span class="op">::</span><span class="kw">login_db</span>(params<span class="op">$</span>databrary_login)) {</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">  vol_<span class="dv">8</span>_meta &lt;-<span class="st"> </span>databraryapi<span class="op">::</span><span class="kw">download_session_csv</span>(<span class="dt">vol_id =</span> <span class="dv">8</span>)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">}</a></code></pre></div>
+<pre><code>## Login successful.</code></pre>
+<p><a href="https://github.com/PLAY-behaviorome/databraryapi" class="uri">https://github.com/PLAY-behaviorome/databraryapi</a></p>
+</section><section class="slide level2">
+
+<p><img src="2019-12-18-data-sci_files/figure-revealjs/plot-demo-1.png" width="768" height="500px" /></p>
+<p><small> Tamis-LeMonda, C. (2013). Language, cognitive, and socio-emotional skills from 9 months until their transition to first grade in U.S. children from African-American, Dominican, Mexican, and Chinese backgrounds. Databrary. Retrieved December 18, 2019 from <a href="http://doi.org/10.17910/B7CC74" class="uri">http://doi.org/10.17910/B7CC74</a> </small></p>
+</section><section id="issues" class="slide level2">
+<h2>Issues…</h2>
+<ul>
+<li>Unaltered data about individual most valuable for future research uses</li>
+<li>Does de-identification offer sufficient protection?</li>
+<li>Should most (all?) human data be shared via restricted means?</li>
+</ul>
+</section><section class="slide level2">
+
+<video width="800" loop data-autoplay>
+<source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
+</video>
+<p><a href="mailto:rogilmore@psu.edu" class="email">rogilmore@psu.edu</a></br> <a href="https://gilmore-lab.github.io" class="uri">https://gilmore-lab.github.io</a></br> <a href="https://gilmore-lab.github.io/2019-01-15-open-science-psu-hhd/" class="uri">https://gilmore-lab.github.io/2019-01-15-open-science-psu-hhd/</a></p>
+</section><section id="stack" class="slide level2">
+<h2>Stack</h2>
+<p>This talk was produced on 2019-12-18 in <a href="http://rstudio.com">RStudio</a> using R Markdown and the reveal.JS framework. The code and materials used to generate the slides may be found at <a href="https://github.com/gilmore-lab/2019-12-18-data-sci/" class="uri">https://github.com/gilmore-lab/2019-12-18-data-sci/</a>. Information about the R Session that produced the code is as follows:</p>
+<pre><code>## R version 3.5.3 (2019-03-11)
+## Platform: x86_64-apple-darwin15.6.0 (64-bit)
+## Running under: macOS Mojave 10.14.6
+## 
+## Matrix products: default
+## BLAS: /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+## [1] forcats_0.4.0   stringr_1.4.0   dplyr_0.8.1     purrr_0.3.2    
+## [5] readr_1.3.1     tidyr_0.8.3     tibble_2.1.3    ggplot2_3.2.0  
+## [9] tidyverse_1.2.1
+## 
+## loaded via a namespace (and not attached):
+##  [1] revealjs_0.9            zoo_1.8-6              
+##  [3] tidyselect_0.2.5        xfun_0.8               
+##  [5] haven_2.1.0             lattice_0.20-38        
+##  [7] colorspace_1.4-1        generics_0.0.2         
+##  [9] htmltools_0.3.6         yaml_2.2.0             
+## [11] rlang_0.4.0             pillar_1.4.1           
+## [13] withr_2.1.2             glue_1.3.1             
+## [15] modelr_0.1.4            readxl_1.3.1           
+## [17] munsell_0.5.0           gtable_0.3.0           
+## [19] cellranger_1.1.0        rvest_0.3.4            
+## [21] evaluate_0.14           knitr_1.23             
+## [23] lmtest_0.9-37           curl_3.3               
+## [25] vcd_1.4-4               broom_0.5.2            
+## [27] Rcpp_1.0.1              scales_1.0.0           
+## [29] backports_1.1.4         jsonlite_1.6           
+## [31] databraryapi_0.1.6.9001 hms_0.4.2              
+## [33] packrat_0.5.0           digest_0.6.19          
+## [35] stringi_1.4.3           keyring_1.1.0          
+## [37] grid_3.5.3              cli_1.1.0              
+## [39] tools_3.5.3             magrittr_1.5           
+## [41] lazyeval_0.2.2          crayon_1.3.4           
+## [43] pkgconfig_2.0.2         MASS_7.3-51.4          
+## [45] xml2_1.2.0              rsconnect_0.8.13       
+## [47] lubridate_1.7.4         rstudioapi_0.10        
+## [49] assertthat_0.2.1        rmarkdown_1.13         
+## [51] httr_1.4.0              R6_2.4.0               
+## [53] nlme_3.1-140            compiler_3.5.3</code></pre>
+</section></section>
+    </div>
+  </div>
+
+  <script src="libs/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="libs/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'libs/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'libs/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

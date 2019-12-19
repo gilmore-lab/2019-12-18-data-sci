@@ -145,7 +145,7 @@ knitr::include_graphics("http://www.globalhealthresearch.co/workshops/ieat/img/i
 write_video_clip_html("https://www.databrary.org/video/example-video-1.mp4", vid_w_pix = 640, vid_h_pix = 480)
 ```
 
-## Open sharing (but with restricted audiences
+## Open sharing (but with restricted audiences)
 
 ---
 
@@ -204,7 +204,7 @@ Tamis-LeMonda, C. (2013). Language, cognitive, and socio-emotional skills from 9
 ## Issues...
 
 - Who owns data?
-- Unaltered data about individual most valuable for future research uses
+- Unaltered data about individuals most valuable for future research uses
 - Does de-identification offer sufficient protection?
 - Shouldn't most (all?) human data be shared via restricted means?
 

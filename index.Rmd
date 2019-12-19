@@ -203,6 +203,7 @@ Tamis-LeMonda, C. (2013). Language, cognitive, and socio-emotional skills from 9
 
 ## Issues...
 
+- Who owns data?
 - Unaltered data about individual most valuable for future research uses
 - Does de-identification offer sufficient protection?
 - Shouldn't most (all?) human data be shared via restricted means?
